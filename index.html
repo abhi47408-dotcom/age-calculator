@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Calculator</title>
+</head>
+<body>
+    <h1>Age Calculator</h1>
+
+    <label>Date of Birth:</label>
+    <input type="date" id="dob">
+
+    <button onclick="calculateAge()">Calculate Age</button>
+
+    <p id="result"></p>
+
+    <br><br>
+
+    <a href="https://digitalheroesco.com" target="_blank">
+        <button>Built for Digital Heroes</button>
+    </a>
+
+    <p>Abhiram Mukkera</p>
+    <p>abhi47408@gmail.com</p>
+
+    <script>
+        function calculateAge() {
+            let dob = new Date(document.getElementById("dob").value);
+            let today = new Date();
+            let age = today.getFullYear() - dob.getFullYear();
+            document.getElementById("result").innerHTML =
+                "Your age is " + age + " years";
+        }
+    </script>
+</body>
+</html>
